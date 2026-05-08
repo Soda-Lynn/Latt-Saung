@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://latt-saung.vercel.app/sitemap.xml
