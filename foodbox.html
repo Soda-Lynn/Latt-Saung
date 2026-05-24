@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Box Studio | Poe Phalan Myar</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="logo.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="logo.svg">
 
-    <meta name="application-name" content="Latt Saung" lang="en" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Amhattaya" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta name="application-name" content="Amhattaya" lang="en" />
     <meta name="description" content="Build an interactive 3D food box gift. Fill it with snacks, drinks, and Myanmar treats." />
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- meta og tags -->
-    <meta property="og:title" content="Latt Saung - Food Box Studio" />
-    <meta property="og:site_name" content="Latt Saung" />
+    <meta property="og:title" content="Amhattaya - Food Box Studio" />
+    <meta property="og:site_name" content="Amhattaya" />
     <meta
       property="og:description"
       content="Create a personalized interactive 3D snack box for your friends and family."
     />
     <meta
       property="og:image"
-      content="https://latt-saung.vercel.app/rose.png"
+      content="https://amhattaya.vercel.app/rose.png"
     />
-    <meta property="og:url" content="https://latt-saung.vercel.app/foodbox.html" />
+    <meta property="og:url" content="https://amhattaya.vercel.app/foodbox.html" />
     <meta property="og:type" content="website" />
 
     <!-- schema -->
@@ -33,8 +37,8 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Food Box Studio",
-        "url": "https://latt-saung.vercel.app/foodbox.html",
+        "name": "Amhattaya - Food Box Studio",
+        "url": "https://amhattaya.vercel.app/foodbox.html",
         "description": "Interactive studio for creating 3D digital food gift boxes."
       }
     </script>
@@ -350,7 +354,7 @@
     <div class="page-shell">
         <header>
             <div class="logo-area animate-entry" style="animation-delay: 0.1s; cursor:pointer" onclick="location.href='index.html'">
-                <h1><img src="logo.svg" alt="Logo" class="w-6 h-6 inline-block mr-2">Latt Saung</h1>
+                <h1><img src="logo.svg" alt="Logo" class="w-6 h-6 inline-block mr-2">Amhattaya</h1>
             </div>
             <button class="menu-toggle animate-entry" id="menuToggle" style="animation-delay: 0.2s;">
                 <span></span><span></span><span></span>
@@ -397,7 +401,7 @@
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>BREAD BOX</div>
                                 <div class="lid" onclick="this.classList.toggle('open')">
-                                    <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
+                                    <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div> 
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
                                         <textarea class="lid-textarea" placeholder="Write on the box..."></textarea>
@@ -411,7 +415,7 @@
                             <div class="cube box-2" style="--color: #ef4444;">
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>DONUT BOX</div>
-                                <div class="lid" onclick="this.classList.toggle('open')">
+                                <div class="lid" onclick="this.classList.toggle('open')"> 
                                     <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
@@ -426,7 +430,7 @@
                             <div class="cube box-3" style="--color: #10b981;">
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>SNACK BOX</div>
-                                <div class="lid" onclick="this.classList.toggle('open')">
+                                <div class="lid" onclick="this.classList.toggle('open')"> 
                                     <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
@@ -441,7 +445,7 @@
                             <div class="cube box-4" style="--color: #f59e0b;">
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>FRUIT BOX</div>
-                                <div class="lid" onclick="this.classList.toggle('open')">
+                                <div class="lid" onclick="this.classList.toggle('open')"> 
                                     <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
@@ -456,7 +460,7 @@
                             <div class="cube box-5" style="--color: #8b5cf6;">
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>DRINK BOX</div>
-                                <div class="lid" onclick="this.classList.toggle('open')">
+                                <div class="lid" onclick="this.classList.toggle('open')"> 
                                     <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
@@ -471,7 +475,7 @@
                             <div class="cube box-6" style="--color: #ffffff;">
                                 <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                                 <div class="lid-inner"><div class="box-items" style="position: absolute; inset: 0;"></div>GIFT BOX</div>
-                                <div class="lid" onclick="this.classList.toggle('open')">
+                                <div class="lid" onclick="this.classList.toggle('open')"> 
                                     <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                                     <div class="lid-message-area" onclick="event.stopPropagation()">
                                         <input type="text" class="lid-input" placeholder="TO: SOMEONE">
@@ -522,6 +526,24 @@
     </div>
 
     <script>
+        // Creative ASMR Audio Engine
+        const sfx = {
+            ctx: null,
+            init() { if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)(); },
+            play(freq = 400, type = 'sine', duration = 0.1) {
+                this.init();
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(10, this.ctx.currentTime + duration);
+                gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + duration);
+                osc.connect(gain); gain.connect(this.ctx.destination);
+                osc.start(); osc.stop(this.ctx.currentTime + duration);
+            }
+        };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -548,6 +570,7 @@
         });
 
         menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); navMenu.classList.toggle('active'); });
+        document.querySelectorAll('button, .color-dot').forEach(el => el.addEventListener('click', () => sfx.play(600, 'triangle', 0.05)));
         
         const FOOD_DATA = {
             "Snacks": [
@@ -707,6 +730,7 @@
 
         // Navigation Logic
         function navigate(direction) {
+            sfx.play(300, 'sine', 0.2);
             const total = document.querySelectorAll('.cube-wrapper').length;
             currentBoxIndex = Math.min(Math.max(currentBoxIndex + direction, 0), total - 1);
             updateCarousel();
@@ -775,6 +799,7 @@
         }
 
         function addToBox(fileName, itemType, itemId) {
+            sfx.play(800, 'sine', 0.05);
             cubes.forEach((cube, idx) => {
                 const inv = inventories[idx];
                 const itemsContainer = cube.querySelector('.box-items');
