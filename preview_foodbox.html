@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preview Your Food Box</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-    <meta name="application-name" content="Latt Saung" lang="en" />
-    <meta name="description" content="Someone has sent you a digital gift! Open this link to see your interactive 3D food box." />
+    <meta name="application-name" content="Amhattaya" lang="en" />
+    <meta name="description" content="Someone has sent you a digital gift! Open this link to see your interactive 3D food box." /> 
 
    <!-- Favicon -->
-    <link rel="icon" href="pre2.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="pre2.svg">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Amhattaya" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
-    <meta name="description" content="Someone has sent you a digital food box from Latt Saung. Click to open your food box" />
+    <meta name="description" content="Someone has sent you a digital food box from Amhattaya. Click to open your food box" />
 
     <!-- meta og tags -->
-    <meta property="og:title" content="You've received a Food Box from Latt Saung!  " />
-    <meta property="og:site_name" content="Latt Saung" />
+    <meta property="og:title" content="You've received a Food Box from Amhattaya!  " />
+    <meta property="og:site_name" content="Amhattaya" />
     <meta
       property="og:description"
-      content="Someone sent you a digital food box from Latt Saung. Click to open your delicious food box!"
+      content="Someone sent you a digital food box from Amhattaya. Click to open your delicious food box!"
     />
     <meta
       property="og:image"
-      content="https://latt-saung.vercel.app/pre2.png"
+      content="https://amhattaya.vercel.app/pre2.png"
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" /> 
 
     <!-- schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Latt Saung - Digital Gift Preview",
+        "@type": "WebPage", 
+        "name": "Amhattaya - Digital Gift Preview",
         "description": "View your digital food box sent from someone."
       }
     </script>
@@ -106,7 +111,7 @@
         .side-top { width: 100%; height: 100%; transform: translateZ(var(--z)); background: transparent !important; pointer-events: none; }
         
         .lid-inner { width: 100%; height: 100%; position: absolute; translate: 0 0 var(--z); background: #fdf5e6 !important; background-image: none !important; border: 2px solid rgba(0, 0, 0, 0.2); pointer-events: none; z-index: 15; display: flex; align-items: center; justify-content: center; font-size: 0.8em; font-weight: 900; color: rgba(0,0,0,0.3); overflow: hidden; }
-        .lid { 
+        .lid {
             width: calc(var(--x) + 0.4em); 
             height: calc(var(--y) + 0.4em);
             left: -0.2em; top: -0.2em;
@@ -159,11 +164,11 @@
                 <div id="box-cube" class="cube">
                     <div class="side-left"></div><div class="side-right"></div><div class="side-bottom"></div><div class="side-top"></div>
                     <div class="lid-inner" style="z-index: 5;">
-                        <div id="box-items-layer" style="position: absolute; inset: 0;"></div>
-                        <span style="opacity: 0.3;">LATT SAUNG</span>
+                        <div id="box-items-layer" style="position: absolute; inset: 0;"></div> 
+                        <span style="opacity: 0.3;">AMHATTAYA</span>
                     </div>
                     <div id="food-container" style="position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; z-index: 10;"></div>
-                    <div id="box-lid" class="lid" onclick="this.classList.toggle('open')">
+                    <div id="box-lid" class="lid" onclick="toggleLid(this)">
                         <div class="lid-side ls-f"></div><div class="lid-side ls-b"></div><div class="lid-side ls-l"></div><div class="lid-side ls-r"></div>
                         <div class="lid-message-area">
                             <input type="text" id="lid-to" class="lid-input" readonly>
@@ -289,6 +294,21 @@
                 document.addEventListener('mouseup', endRotate);
             });
         };
+
+        function toggleLid(lidEl) {
+            const isOpen = lidEl.classList.toggle('open');
+            if (isOpen) {
+                // Trigger Confetti
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#73ff00', '#ff4d4d', '#3b82f6', '#f59e0b'],
+                    zIndex: 999
+                });
+            }
+        }
+
         function updateBillboarding(cube) {
             cube.querySelectorAll('.food-in-box').forEach(img => {
                 img.style.transform = `translateZ(var(--z)) rotateX(${-cube.rotX}deg)`;
